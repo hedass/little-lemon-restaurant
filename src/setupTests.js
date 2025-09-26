@@ -3,3 +3,9 @@
 // expect(element).toHaveTextContent(/react/i)
 // learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom';
+
+// Mock window.scrollTo (jsdom doesn't implement it and components call it)
+if (!window.scrollTo) {
+	// eslint-disable-next-line no-undef
+	window.scrollTo = jest.fn();
+}

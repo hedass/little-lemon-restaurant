@@ -21,7 +21,12 @@ export const useCart = () => {
   // Save cart items to localStorage whenever cartItems changes (but not on initial load)
   useEffect(() => {
     if (isLoaded) {
-      localStorage.setItem('littleLemonCart', JSON.stringify(cartItems));
+      try {
+        localStorage.setItem('littleLemonCart', JSON.stringify(cartItems));
+      } catch (error) {
+        // Handle quota exceeded or mock errors gracefully in tests
+        console.error('Error saving cart data:', error);
+      }
     }
   }, [cartItems, isLoaded]);
 

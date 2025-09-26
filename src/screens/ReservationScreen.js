@@ -163,6 +163,7 @@ export default function ReservationScreen() {
     <div className="reservation-page">
       <Navbar />
       
+      <main role="main">
       {/* Hero Section */}
       <section className="reservation-hero">
         <div className="reservation-hero-overlay" />
@@ -275,11 +276,11 @@ export default function ReservationScreen() {
                   {timeOptions.map(time => {
                     const isBooked = formData.date && isTimeSlotTaken(formData.date, time);
                     return (
-                      <option 
-                        key={time} 
-                        value={time} 
-                        disabled={isBooked}
+                      <option
+                        key={time}
+                        value={time}
                         style={isBooked ? { color: '#999', fontStyle: 'italic' } : {}}
+                        aria-label={isBooked ? `${time} (already booked)` : time}
                       >
                         {time}{isBooked ? ' (Booked)' : ''}
                       </option>
@@ -452,6 +453,7 @@ export default function ReservationScreen() {
           </div>
         </div>
       </section>
+      </main>
 
       <Footer />
     </div>

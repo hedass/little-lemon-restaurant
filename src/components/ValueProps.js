@@ -17,7 +17,13 @@ export default function ValueProps() {
           {props.map(p => (
             <article key={p.id} className="ll-prop" aria-labelledby={`prop-${p.id}`}>
               <div className="ll-prop-media">
-                <img src={p.icon} alt="" aria-hidden="true" className="ll-prop-icon" />
+                {/* Provide meaningful alt text so images are announced instead of treated as purely decorative */}
+                <img
+                  src={p.icon}
+                  alt={`${p.title} icon`}
+                  className="ll-prop-icon"
+                  loading="lazy"
+                />
               </div>
               <div className="ll-prop-body">
                 <h3 id={`prop-${p.id}`}>{p.title}</h3>

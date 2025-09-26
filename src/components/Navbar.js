@@ -68,7 +68,10 @@ export default function Navbar() {
     <header className="ll-navbar" role="banner">
       <nav className="ll-nav container" aria-label="Main navigation" ref={navRef}>
         <div className="ll-brand">
-          <Link to="/" className="ll-logo" onClick={handleHomeClick}>Little Lemon</Link>
+          <Link to="/" className="ll-logo" onClick={handleHomeClick}>
+            <img src="/assets/Logo.svg" alt="Little Lemon Logo" className="ll-logo-img" />
+            <span className="ll-logo-text">Little Lemon</span>
+          </Link>
         </div>
 
         <button
@@ -82,10 +85,9 @@ export default function Navbar() {
           <span aria-hidden>☰</span>
         </button>
 
-        <ul className={`ll-nav-list ${open ? 'is-open' : ''}`} id="ll-nav-list" role="menu">
-          <li role="none">
+        <ul className={`ll-nav-list ${open ? 'is-open' : ''}`} id="ll-nav-list">
+          <li>
             <Link 
-              role="menuitem" 
               to="/" 
               onClick={(e) => { handleHomeClick(e); }}
               className={location.pathname === '/' ? 'active' : ''}
@@ -93,18 +95,17 @@ export default function Navbar() {
               Home
             </Link>
           </li>
-          <li role="none">
-            <a role="menuitem" href="#menu" onClick={handleSectionClick('menu')}>Menu</a>
+          <li>
+            <a href="#menu" onClick={handleSectionClick('menu')}>Menu</a>
           </li>
-          <li role="none">
-            <a role="menuitem" href="#about" onClick={handleSectionClick('about')}>About</a>
+          <li>
+            <a href="#about" onClick={handleSectionClick('about')}>About</a>
           </li>
-          <li role="none">
-            <a role="menuitem" href="#contact" onClick={handleSectionClick('contact')}>Contact</a>
+          <li>
+            <a href="#contact" onClick={handleSectionClick('contact')}>Contact</a>
           </li>
-          <li role="none">
+          <li>
             <Link 
-              role="menuitem" 
               to="/reservation" 
               onClick={handleNavClick}
               className={location.pathname === '/reservation' ? 'active' : ''}
@@ -112,9 +113,8 @@ export default function Navbar() {
               Reservations
             </Link>
           </li>
-          <li role="none">
+          <li>
             <Link 
-              role="menuitem" 
               to="/cart" 
               onClick={handleNavClick}
               className={`ll-cart-link ${location.pathname === '/cart' ? 'active' : ''}`}
