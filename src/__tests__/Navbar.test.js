@@ -46,9 +46,12 @@ describe('Navbar Component', () => {
     expect(screen.getByText('Reservations')).toBeInTheDocument();
   });
 
-  test('shows cart icon with item count', () => {
+  test('shows cart icon with item count', async () => {
     renderWithProviders(<Navbar />);
-    const cartLink = screen.getByRole('link', { name: /cart/i });
+    const user = userEvent.setup();
+    const hamburgerButton = screen.getByRole('button', { name: /(open|close) menu/i });
+    await user.click(hamburgerButton);
+    const cartLink = await screen.findByRole('link', { name: /cart/i });
     expect(cartLink).toBeInTheDocument();
   });
 
@@ -180,11 +183,10 @@ describe('Navbar Component', () => {
   test('cart link navigates to cart page', async () => {
     renderWithProviders(<Navbar />);
     const user = userEvent.setup();
-    
-  const cartLink = screen.getByRole('link', { name: /cart/i });
+    const hamburgerButton = screen.getByRole('button', { name: /(open|close) menu/i });
+    await user.click(hamburgerButton);
+    const cartLink = await screen.findByRole('link', { name: /cart/i });
     await user.click(cartLink);
-    
-    // Should navigate to cart page (implementation specific)
     expect(cartLink).toHaveAttribute('href', '/cart');
   });
 

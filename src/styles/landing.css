@@ -47,19 +47,28 @@ body {
   color: white;
   position: sticky;
   top: 0;
-  z-index: 60;
+  z-index: 120;
 }
 .ll-nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 12px 16px;
+  position: relative;
+  z-index: 130;
 }
 .ll-logo {
+  display: flex;
   font-family: "Markazi Text", serif;
   font-size: clamp(20px, 3.2vw, 36px);
   color: var(--yellow);
   text-decoration: none;
+  align-items: center;
+}
+.ll-logo-img {
+  height: 40px;
+  width: auto;
+  margin-right: -100px;
 }
 .ll-nav-list {
   list-style: none;
@@ -91,6 +100,8 @@ body {
   color: white;
   font-size: 22px;
   padding: 8px;
+  position: relative;
+  z-index: 140;
 }
 .ll-nav-toggle[aria-expanded="true"] {
   background: rgba(255, 255, 255, 0.04);
@@ -126,6 +137,51 @@ body {
   }
   .ll-nav-list a {
     padding: 10px 14px;
+  }
+
+  /* Full-screen overlay navigation */
+  .ll-nav-overlay {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(2px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 220ms ease;
+    z-index: 100; /* below navbar (120) */
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding-top: 0;
+  }
+  .ll-nav-overlay.is-open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .ll-nav-overlay .ll-nav-list {
+    display: flex !important;
+    flex-direction: column;
+    position: static;
+    background: var(--green);
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    padding: 96px 32px 48px;
+    gap: 12px;
+    border-radius: 0;
+    box-shadow: none;
+    overflow-y: auto;
+    padding-top: 120px;
+  }
+  .ll-nav-overlay .ll-nav-list li {
+    list-style: none;
+  }
+  .ll-nav-overlay .ll-nav-list a {
+    font-size: 22px;
+    padding: 14px 8px;
+    display: inline-block;
   }
 }
 
@@ -277,6 +333,9 @@ body {
   }
 }
 @media (max-width: 760px) {
+  .ll-nav-list {
+    right: 12px;
+  }
   .ll-hero-inner {
     grid-template-columns: 1fr;
   }
@@ -286,8 +345,9 @@ body {
   .ll-cards {
     grid-template-columns: 1fr;
   }
-  .ll-nav-list {
-    right: 12px;
+  .ll-navbar {
+    position: sticky;
+    top: 0;
   }
 }
 
