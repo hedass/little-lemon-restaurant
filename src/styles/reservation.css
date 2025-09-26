@@ -1,0 +1,451 @@
+/* Reservation Page Styles */
+.reservation-page {
+  min-height: 100vh;
+  background-color: #EDEFEE;
+}
+
+/* Hero Section */
+.reservation-hero {
+  position: relative;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, #495E57 0%, #333333 100%);
+}
+
+.reservation-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(73, 94, 87, 0.7);
+  z-index: 1;
+}
+
+.reservation-hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.reservation-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+}
+
+.reservation-hero-title {
+  font-family: 'Markazi Text', serif;
+  font-size: 4rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.reservation-hero-subtitle {
+  font-family: 'Karla', sans-serif;
+  font-size: 1.25rem;
+  margin-bottom: 0;
+  opacity: 0.9;
+}
+
+/* Form Section */
+.reservation-form-section {
+  padding: 4rem 0;
+  background-color: #EDEFEE;
+}
+
+.reservation-form-card {
+  background: white;
+  border-radius: 16px;
+  padding: 3rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-title {
+  font-family: 'Markazi Text', serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #495E57;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.reservation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Karla', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 0.5rem;
+}
+
+.form-icon {
+  font-size: 1.2rem;
+}
+
+.form-input {
+  padding: 1rem;
+  border: 2px solid #EDEFEE;
+  border-radius: 8px;
+  font-family: 'Karla', sans-serif;
+  font-size: 1rem;
+  background-color: white;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #F4CE14;
+  box-shadow: 0 0 0 3px rgba(244, 206, 20, 0.1);
+}
+
+.form-input-error {
+  border-color: #e74c3c;
+}
+
+.form-input-error:focus {
+  border-color: #e74c3c;
+  box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+}
+
+.form-error {
+  color: #e74c3c;
+  font-family: 'Karla', sans-serif;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.form-submit {
+  background-color: #F4CE14;
+  color: #333333;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-family: 'Karla', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-submit:hover {
+  background-color: #e6bb12;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(244, 206, 20, 0.3);
+}
+
+.form-submit:active {
+  transform: translateY(0);
+}
+
+.form-submit:disabled,
+.form-submit-loading {
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.form-submit:disabled:hover,
+.form-submit-loading:hover {
+  background-color: #cccccc;
+  transform: none;
+}
+
+/* Contact Section */
+.contact-section {
+  background-color: #495E57;
+  color: white;
+  padding: 4rem 0;
+}
+
+.contact-title {
+  font-family: 'Markazi Text', serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #F4CE14;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contact-item {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(244, 206, 20, 0.2);
+}
+
+.contact-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact-item h3 {
+  font-family: 'Karla', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #F4CE14;
+  margin-bottom: 1rem;
+}
+
+.contact-item p {
+  font-family: 'Karla', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+  opacity: 0.9;
+}
+
+.contact-item p:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .reservation-hero {
+    height: 300px;
+  }
+  
+  .reservation-hero-title {
+    font-size: 3rem;
+  }
+  
+  .reservation-hero-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .reservation-form-card {
+    padding: 2rem;
+    margin: 0 1rem;
+  }
+  
+  .form-title {
+    font-size: 2rem;
+  }
+  
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .contact-item {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .reservation-hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .reservation-form-card {
+    padding: 1.5rem;
+  }
+  
+  .form-title {
+    font-size: 1.8rem;
+  }
+  
+  .form-input {
+    padding: 0.8rem;
+  }
+  
+  .form-submit {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  .form-input,
+  .form-submit {
+    transition: none;
+  }
+  
+  .form-submit:hover {
+    transform: none;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .form-input {
+    border-width: 3px;
+  }
+  
+  .form-input:focus {
+    border-color: #000000;
+    box-shadow: 0 0 0 3px #F4CE14;
+  }
+  
+  .contact-item {
+    border-width: 2px;
+  }
+}
+
+/* Existing Bookings Section */
+.existing-bookings-section {
+  padding: 4rem 0;
+  background-color: #FBDABB;
+}
+
+.existing-bookings-title {
+  font-family: 'Markazi Text', serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #495E57;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.existing-bookings-subtitle {
+  font-family: 'Karla', sans-serif;
+  font-size: 1.1rem;
+  color: #495E57;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.existing-bookings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.booking-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(73, 94, 87, 0.1);
+  border: 2px solid #EDEFEE;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.booking-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(73, 94, 87, 0.15);
+}
+
+.booking-date,
+.booking-time,
+.booking-guests,
+.booking-occasion {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.booking-date:last-child,
+.booking-time:last-child,
+.booking-guests:last-child,
+.booking-occasion:last-child {
+  margin-bottom: 0;
+}
+
+.booking-icon {
+  font-size: 1.2rem;
+  margin-right: 0.8rem;
+  min-width: 24px;
+}
+
+.booking-text {
+  font-family: 'Karla', sans-serif;
+  font-size: 1rem;
+  color: #495E57;
+  font-weight: 500;
+}
+
+.booking-date .booking-text {
+  font-weight: 600;
+  color: #333333;
+}
+
+/* Responsive adjustments for existing bookings */
+@media (max-width: 768px) {
+  .existing-bookings-section {
+    padding: 3rem 0;
+  }
+  
+  .existing-bookings-title {
+    font-size: 2rem;
+  }
+  
+  .existing-bookings-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .booking-card {
+    padding: 1.2rem;
+  }
+}
+
+/* Development Admin Panel */
+.admin-panel {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #EDEFEE;
+  text-align: center;
+}
+
+.admin-button {
+  background-color: #EE9972;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  font-family: 'Karla', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.admin-button:hover {
+  background-color: #e8835a;
+  transform: translateY(-1px);
+}
+
+.admin-button:active {
+  transform: translateY(0);
+}

@@ -1,0 +1,304 @@
+/* Cart Page Styles - Following Little Lemon Brand Guidelines */
+
+.ll-cart {
+  padding: 2rem 0;
+  min-height: 60vh;
+  background-color: var(--light);
+}
+
+.ll-cart h1 {
+  font-family: 'Markazi Text', serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: var(--dark);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Empty Cart */
+.ll-cart-empty {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: white;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+.ll-cart-empty p {
+  font-family: 'Karla', sans-serif;
+  font-size: 1.125rem;
+  color: var(--dark);
+  margin: 0.5rem 0;
+}
+
+/* Cart Items Container */
+.ll-cart-items {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Individual Cart Item */
+.ll-cart-item {
+  display: grid;
+  grid-template-columns: 80px 1fr auto auto;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--light);
+}
+
+.ll-cart-item:last-child {
+  border-bottom: none;
+}
+
+.ll-cart-item-image img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.ll-cart-item-details h3 {
+  font-family: 'Karla', sans-serif;
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: var(--dark);
+  margin: 0 0 0.25rem 0;
+}
+
+.ll-cart-item-desc {
+  font-family: 'Karla', sans-serif;
+  font-size: 0.875rem;
+  color: var(--green);
+  margin: 0 0 0.5rem 0;
+  line-height: 1.4;
+}
+
+.ll-cart-item-price {
+  font-family: 'Karla', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+/* Quantity Controls */
+.ll-cart-item-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.ll-quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--light);
+  padding: 0.25rem;
+  border-radius: 4px;
+}
+
+.ll-quantity {
+  font-family: 'Karla', sans-serif;
+  font-weight: bold;
+  min-width: 2rem;
+  text-align: center;
+  color: var(--dark);
+}
+
+.ll-cart-item-total {
+  font-family: 'Karla', sans-serif;
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: var(--green);
+  text-align: right;
+}
+
+/* Cart Summary */
+.ll-cart-summary {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ll-cart-total {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: var(--light);
+  border-radius: 4px;
+}
+
+.ll-cart-total h3 {
+  font-family: 'Markazi Text', serif;
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: var(--green);
+  margin: 0;
+}
+
+.ll-cart-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Button Styles */
+.ll-btn {
+  font-family: 'Karla', sans-serif;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  font-size: 1rem;
+}
+
+.ll-btn-primary {
+  background-color: var(--yellow);
+  color: var(--dark);
+}
+
+.ll-btn-primary:hover {
+  background-color: #e6bb00;
+  transform: translateY(-1px);
+}
+
+.ll-btn-secondary {
+  background-color: var(--green);
+  color: white;
+}
+
+.ll-btn-secondary:hover {
+  background-color: #3d4b44;
+}
+
+.ll-btn-outline {
+  background-color: transparent;
+  border: 2px solid var(--green);
+  color: var(--green);
+}
+
+.ll-btn-outline:hover {
+  background-color: var(--green);
+  color: white;
+}
+
+.ll-btn-sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  min-width: 2.5rem;
+}
+
+/* Order Button in Menu Highlights */
+.ll-order-btn {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.ll-card-price {
+  font-family: 'Karla', sans-serif;
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: var(--green);
+  margin: 0.5rem 0;
+}
+
+/* Cart Badge in Navbar */
+.ll-cart-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ll-cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -12px;
+  background-color: var(--orange);
+  color: white;
+  font-family: 'Karla', sans-serif;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 0.2rem 0.5rem;
+  border-radius: 50%;
+  min-width: 1.2rem;
+  height: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: cartBadgeAppear 0.3s ease-out;
+}
+
+@keyframes cartBadgeAppear {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ll-cart-item {
+    grid-template-columns: 60px 1fr;
+    grid-template-rows: auto auto;
+    gap: 0.75rem;
+  }
+
+  .ll-cart-item-controls {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+  }
+
+  .ll-cart-item-total {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+
+  .ll-cart-actions {
+    flex-direction: column;
+  }
+
+  .ll-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .ll-cart {
+    padding: 1rem 0;
+  }
+
+  .ll-cart h1 {
+    font-size: 2rem;
+  }
+
+  .ll-cart-items,
+  .ll-cart-summary {
+    margin: 0 -0.5rem;
+    border-radius: 0;
+  }
+
+  .ll-cart-item-image img {
+    width: 60px;
+    height: 60px;
+  }
+}
